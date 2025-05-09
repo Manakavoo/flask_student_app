@@ -1,0 +1,48 @@
+<!-- <form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name(size=32) }}<br>
+    {{ form.email.label }} {{ form.email(size=32) }}<br>
+    {{ form.academic_background.label }} {{ form.academic_background(cols=30, rows=4) }}<br>
+    {{ form.submit() }}
+  </form>
+   -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Student Application Form</title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body>
+       <div class="container">
+           <h1>Student Admission Form</h1>
+           <form action="{{ url_for('student.apply') }}" method="post" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}  <!-- Add this line to include the CSRF token -->
+
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" required placeholder="e.g.vidhya" title="Enter your full name">
+        
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="e.g. vidhya@.com" title="Enter your email address">
+        
+            <label for="academic_background">Academic Background</label>
+            <textarea name="academic_background" id="academic_background" rows="4" required 
+                      placeholder="Briefly describe your education" title="Enter academic background"></textarea>
+        
+            <label for="degree_certificate">Upload Degree Certificate (PDF)</label>
+            <input type="file" name="degree_certificate" id="degree_certificate" accept=".pdf" required 
+                   title="Upload your degree certificate in PDF format">
+        
+            <label for="id_proof">Upload ID Proof (PDF)</label>
+            <input type="file" name="id_proof" id="id_proof" accept=".pdf" required 
+                   title="Upload a valid ID proof in PDF format">
+        
+            <button type="submit" title="Submit your application">Submit Application</button>
+        </form>
+        
+       </div>
+   </body>
+   </html>
+   

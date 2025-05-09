@@ -1,0 +1,49 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.*
+
+*.pdf
+
+# Flask instance folder
+instance/
+
+# SQLite database
+*.sqlite3
+*.db
+
+# Migrations
+migrations/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# Python virtual environments
+venv/
+env/
+.venv/
+.ENV/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Compiled files
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# PDF output (if you're generating PDFs)
+app/static/*.pdf
+
+setup.py

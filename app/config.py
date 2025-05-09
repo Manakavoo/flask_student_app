@@ -1,0 +1,1 @@
+# Add configuration classes if needed

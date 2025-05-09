@@ -1,0 +1,9 @@
+Flask
+Flask-WTF
+Flask-Migrate
+Flask-SQLAlchemy
+python-dotenv
+WeasyPrint
+email-validator
+reportlab
+mysqlclient

@@ -1,0 +1,45 @@
+Project setup
+
+create .env file
+
+# Add your environment variables here, e.g., DATABASE_URL, SECRET_KEY
+
+FLASK_APP=run.py
+FLASK_ENV=development
+SECRET_KEY=supersecretkey
+DATABASE_URL=sqlite:///app.db
+
+How to run ?
+
+1. create a virtual env in this directory 
+In terminal , run :  
+        python -m venv venv
+        venv\Scripts\activate 
+
+2. install dependencies 
+        pip install -r requirements.txt
+
+
+3. db initialization
+In terminal , run :  
+        flask db init
+        flask db migrate -m "Initial migration"
+        flask db upgrade
+
+
+4. run a flask app
+In terminal , run :  
+        flask run
+
+Visit: http://127.0.0.1:5000/student/apply
+Admin UI: http://127.0.0.1:5000/admin/review
+
+
+if you want to use mysql as a database , then 
+add this line to the ".env" file  
+        DATABASE_URL = mysql://username:password@localhost/db_name 
+        make sure to replace the username, password, db_name 
+
+In terminal, run:
+        flask db migrate -m "Switch to MySQL"
+        flask db upgrade
