@@ -1,4 +1,4 @@
-```markdown
+
 ## Student Admission Portal (Flask)
 
 This is a web-based student admission system built using **Python**, **Flask**, and **SQLAlchemy**. It allows students to apply for admission by submitting personal and academic details, and enables admins to review, approve, and generate PDF admission letters.
